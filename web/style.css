@@ -13,8 +13,10 @@ html,body{
 }
 
 .display-1 {
-    width:140px;
-    height: 80px;
+    width:100px;
+    height: 60px;
+    transform: scale(1.7);
+    margin-left: 10px;
 }
 
 nav{
