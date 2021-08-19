@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.introText{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 10;
+}
+.introContainer{
+    position: relative;
+    /* border: 4px solid green; */
+    /* background-image: url(assets/intro.jpeg); */
+    background-size: 100%, 70%;
+    background-repeat: no-repeat;
+    height: 79vh;
+    width: 100vw;
+    
+}
+.introContainer img{
+    object-fit: cover;
+    filter: drop-shadow(16px 16px 20px blue);
+    filter: contrast(200%);
+    filter: opacity(48%);   
+    filter: saturate(200%);
+    filter: brightness(0.7);
+    z-index: 2;
+    /* filter: blur(1px); */
+   
+}
+
+.buttonLinks{
+    border: 2px solid black;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.buttonLinks div{
+    display: flex;
+    justify-content: space-around;
+    /* border: 2px solid pink; */
+    width: 90%;
+
+}
+.buttonLinks div button {
+    text-transform: uppercase;
+
+}
+.btnLink{
+    width: 300px;
+    height: 70px;
+    
+}
+
+@media only screen and (max-width: 720px) {
+    .btnLink{
+        width: 200px;
+        height: 50px;
+        
+    }
+  }
+
+  #purple{
+      background: #800080;
+  }
+  #purple:hover{
+    background: #5b025b;
+  }
