@@ -112,7 +112,8 @@ nav .btn:hover{
         top: 50%;
         transform: translate(-50%,-50%);
         color: white;
-        font-size: 35px;
+        font-size: 32px;
+        margin-left: 53px;
 
     }
     .introContainer img{
