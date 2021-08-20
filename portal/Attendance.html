@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Attendance</title>
+    <!-- Bootstrap v 3.4.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/ico" href="/Pics/Favicon.ico">
+    <link rel="stylesheet" href="/w3.css">
+    <style>
+        .myNav {
+            list-style-type: none;
+            float: right;
+        }
+        
+        .activep {
+            background-color: lightgreen;
+        }
+        
+        .activeab {
+            background-color: rgb(235, 60, 60)
+        }
+    </style>
+</head>
+
+<body onload="onloadfn()">
+    <div class="container"><br>
+        <!-- <img src="/Pics/treePicture.jpg" alt="Tree" style="z-index: 9999 !important; width: 10%; height: 20%">
+        <img src="/Pics/treePicture.jpg" alt="Tree" style="z-index: 9999 !important; width: 10%; height: 20%">
+        <img src="/Pics/treePicture.jpg" alt="Tree" style="z-index: 9999 !important; width: 10%; height: 20%">
+        <img src="/Pics/treePicture.jpg" alt="Tree" style="z-index: 9999 !important; width: 10%; height: 20%">
+        <img src="/Pics/treePicture.jpg" alt="Tree" style="z-index: 9999 !important; width: 10%; height: 20%">
+        <img src="/Pics/treePicture.jpg" alt="Tree" style="z-index: 9999 !important; width: 10%; height: 20%">
+        <img src="/Pics/treePicture.jpg" alt="Tree" style="z-index: 9999 !important; width: 10%; height: 20%">
+        <img src="/Pics/treePicture.jpg" alt="Tree" style="z-index: 9999 !important; width: 10%; height: 20%">
+        <img src="/Pics/treePicture.jpg" alt="Tree" style="z-index: 9999 !important; width: 10%; height: 20%"> -->
+        <br>
+        <input class="form-control" id="myInput" type="text" placeholder="Filter"><br>
+
+        <form onsubmit="showresult()" action="index.html">
+            <table class="w3-table w3-bordered w3-striped" id="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th></th>
+                        <th>Attendance</th>
+                        <th> </th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th>Present </th>
+                        <th>Absent</th>
+                        <th>Not yet arrived</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr id="tableColor">
+                        <td>Ethan</td>
+                        <td>
+                            <input type="radio" name="optradio" id="black" class="radiobtn present" onclick="tablepresentindicator1()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio" class="radiobtn absent" onclick="tableabsentindicator1()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio" class="radiobtn notarrived" onclick="tablenotarrindicator1()">
+                        </td>
+                    </tr>
+                    <tr id="tableColor2">
+                        <td>Robin</td>
+                        <td>
+                            <input type="radio" name="optradio2" class="radiobtn present" onclick="tablepresentindicator2()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio2" class="radiobtn absent" onclick="tableabsentindicator2()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio2" class="radiobtn notarrived" onclick="tablenotarrindicator2()">
+                        </td>
+                    </tr>
+                    <tr id="tableColor3">
+                        <td>Rohit</td>
+                        <td>
+                            <input type="radio" name="optradio3" class="radiobtn present" onclick="tablepresentindicator3()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio3" class="radiobtn absent" onclick="tableabsentindicator3()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio3" class="radiobtn notarrived" onclick="tablenotarrindicator3()">
+                        </td>
+                    </tr>
+                    <tr id="tableColor4">
+                        <td>Rohan</td>
+                        <td>
+                            <input type="radio" name="optradio4" class="radiobtn present" onclick="tablepresentindicator4()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio4" class="radiobtn absent" onclick="tableabsentindicator4()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio4" class="radiobtn notarrived" onclick="tablenotarrindicator4()">
+                        </td>
+                    </tr>
+                    <tr id="tableColor5">
+                        <td>Rahul</td>
+                        <td>
+                            <input type="radio" name="optradio5" class="radiobtn present" onclick="tablepresentindicator5()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio5" class="radiobtn absent" onclick="tableabsentindicator5()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio5" class="radiobtn notarrived" onclick="tablenotarrindicator5()">
+                        </td>
+                    </tr>
+                    <tr id="tableColor6">
+                        <td>Sumit</td>
+                        <td>
+                            <input type="radio" name="optradio6" class="radiobtn present" onclick="tablepresentindicator6()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio6" class="radiobtn absent" onclick="tableabsentindicator6()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio6" class="radiobtn notarrived" onclick="tablenotarrindicator6()">
+                        </td>
+                    </tr>
+                    <tr id="tableColor7">
+                        <td>Ram</td>
+                        <td>
+                            <input type="radio" name="optradio7" class="radiobtn present" onclick="tablepresentindicator7()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio7" class="radiobtn absent" onclick="tableabsentindicator7()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio7" class="radiobtn notarrived" onclick="tablenotarrindicator7()">
+                        </td>
+                    </tr>
+                    <tr id="tableColor8">
+                        <td>Shyam</td>
+                        <td>
+                            <input type="radio" name="optradio8" class="radiobtn present" onclick="tablepresentindicator8()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio8" class="radiobtn absent" onclick="tableabsentindicator8()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio8" class="radiobtn notarrived" onclick="tablenotarrindicator8()">
+                        </td>
+                    </tr>
+                    <tr id="tableColor9">
+                        <td>Shuban</td>
+                        <td>
+                            <input type="radio" name="optradio9" class="radiobtn present" onclick="tablepresentindicator9()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio9" class="radiobtn absent" onclick="tableabsentindicator9()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio9" class="radiobtn notarrived" onclick="tablenotarrindicator9()">
+                        </td>
+                    </tr>
+                    <tr id="tableColor10">
+                        <td>Rob</td>
+                        <td>
+                            <input type="radio" name="optradio10" class="radiobtn present" onclick="tablepresentindicator10()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio10" class="radiobtn absent" onclick="tableabsentindicator10()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio10" class="radiobtn notarrived" onclick="tablenotarrindicator10()">
+                        </td>
+                    </tr>
+                    <tr id="tableColor11">
+                        <td>Bob</td>
+                        <td>
+                            <input type="radio" name="optradio11" class="radiobtn present" onclick="tablepresentindicator11()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio11" class="radiobtn absent" onclick="tableabsentindicator11()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio11" class="radiobtn notarrived" onclick="tablenotarrindicator11()">
+                        </td>
+                    </tr>
+                    <tr id="tableColor12">
+                        <td>Jack</td>
+                        <td>
+                            <input type="radio" name="optradio12" class="radiobtn present" onclick="tablepresentindicator12()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio12" class="radiobtn absent" onclick="tableabsentindicator12()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio12" class="radiobtn notarrived" onclick="tablenotarrindicator12()">
+                        </td>
+                    </tr>
+                    <tr id="tableColor13">
+                        <td>Jacob</td>
+                        <td>
+                            <input type="radio" name="optradio13" class="radiobtn present" onclick="tablepresentindicator13()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio13" class="radiobtn absent" onclick="tableabsentindicator13()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio13" class="radiobtn notarrived" onclick="tablenotarrindicator13()">
+                        </td>
+                    </tr>
+                    <tr id="tableColor14">
+                        <td>William</td>
+                        <td>
+                            <input type="radio" name="optradio14" class="radiobtn present" onclick="tablepresentindicator14()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio14" class="radiobtn absent" onclick="tableabsentindicator14()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio14" class="radiobtn notarrived" onclick="tablenotarrindicator14()">
+                        </td>
+                    </tr>
+                    <tr id="tableColor15">
+                        <td>Noah</td>
+                        <td>
+                            <input type="radio" name="optradio15" class="radiobtn present" onclick="tablepresentindicator15()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio15" class="radiobtn absent" onclick="tableabsentindicator15()">
+                        </td>
+                        <td>
+                            <input type="radio" name="optradio15" class="radiobtn notarrived" onclick="tablenotarrindicator15()">
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table><br>
+            <!--Result Table-->
+            <div id="resultTable">
+                <table class="w3-table w3-bordered w3-center">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th class="w3-centered">Attendance Result</th>
+                            <th></th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Present:
+                            </td>
+                            <td id="alertpresent" class="w3-align-right"></td>
+                            <td></td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                Absent:
+                            </td>
+                            <td id="alertabsent" class="w3-align-right"></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Not yet arrived:
+                            </td>
+                            <td id="alertnotarr" class="w3-align-right"></td>
+                            <td></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <br>
+            <a href="index.html"></a><button type="submit"  class="btn btn-success">Submit</button></a>
+        </form>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#myTable tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+    <!--Result table functions-->
+    <script>
+        function onloadfn() {
+            document.getElementById("resultTable").style.display = "none";
+        }
+        document.querySelector('form').addEventListener('submit', e => {
+            e.preventDefault()
+            let present = document.querySelectorAll('.present:checked').length
+            let absent = document.querySelectorAll('.absent:checked').length
+            let notarrived = document.querySelectorAll('.notarrived:checked').length
+            document.getElementById("alertpresent").innerHTML = present;
+            document.getElementById("alertabsent").innerHTML = absent;
+            document.getElementById("alertnotarr").innerHTML = notarrived;
+        })
+
+        function showresult() {
+            document.getElementById("resultTable").style.display = "block";
+        }
+    </script>
+    <!--Attendance table functions-->
+    <script>
+        function tablepresentindicator1() {
+            document.getElementById("tableColor").style.backgroundColor = "lightgreen";
+        }
+
+        function tableabsentindicator1() {
+            document.getElementById("tableColor").style.backgroundColor = "red";
+        }
+
+        function tablenotarrindicator1() {
+            document.getElementById("tableColor").style.backgroundColor = "yellow";
+        }
+
+        // Next radio
+        function tablepresentindicator2() {
+            document.getElementById("tableColor2").style.backgroundColor = "lightgreen";
+        }
+
+        function tableabsentindicator2() {
+            document.getElementById("tableColor2").style.backgroundColor = "red";
+        }
+
+        function tablenotarrindicator2() {
+            document.getElementById("tableColor2").style.backgroundColor = "yellow";
+        } // Next radio
+        function tablepresentindicator3() {
+            document.getElementById("tableColor3").style.backgroundColor = "lightgreen";
+        }
+
+        function tableabsentindicator3() {
+            document.getElementById("tableColor3").style.backgroundColor = "red";
+        }
+
+        function tablenotarrindicator3() {
+            document.getElementById("tableColor3").style.backgroundColor = "yellow";
+        }
+        // Next radio
+        function tablepresentindicator4() {
+            document.getElementById("tableColor4").style.backgroundColor = "lightgreen";
+        }
+
+        function tableabsentindicator4() {
+            document.getElementById("tableColor4").style.backgroundColor = "red";
+        }
+
+        function tablenotarrindicator4() {
+            document.getElementById("tableColor4").style.backgroundColor = "yellow";
+        } // Next radio
+        function tablepresentindicator5() {
+            document.getElementById("tableColor5").style.backgroundColor = "lightgreen";
+        }
+
+        function tableabsentindicator5() {
+            document.getElementById("tableColor5").style.backgroundColor = "red";
+        }
+
+        function tablenotarrindicator5() {
+            document.getElementById("tableColor5").style.backgroundColor = "yellow";
+        } // Next radio
+        function tablepresentindicator6() {
+            document.getElementById("tableColor6").style.backgroundColor = "lightgreen";
+        }
+
+        function tableabsentindicator6() {
+            document.getElementById("tableColor6").style.backgroundColor = "red";
+        }
+
+        function tablenotarrindicator6() {
+            document.getElementById("tableColor6").style.backgroundColor = "yellow";
+        } // Next radio
+        function tablepresentindicator7() {
+            document.getElementById("tableColor7").style.backgroundColor = "lightgreen";
+        }
+
+        function tableabsentindicator7() {
+            document.getElementById("tableColor7").style.backgroundColor = "red";
+        }
+
+        function tablenotarrindicator7() {
+            document.getElementById("tableColor7").style.backgroundColor = "yellow";
+        } // Next radio
+        function tablepresentindicator8() {
+            document.getElementById("tableColor8").style.backgroundColor = "lightgreen";
+        }
+
+        function tableabsentindicator8() {
+            document.getElementById("tableColor8").style.backgroundColor = "red";
+        }
+
+        function tablenotarrindicator8() {
+            document.getElementById("tableColor8").style.backgroundColor = "yellow";
+        } // Next radio
+        function tablepresentindicator9() {
+            document.getElementById("tableColor9").style.backgroundColor = "lightgreen";
+        }
+
+        function tableabsentindicator9() {
+            document.getElementById("tableColor9").style.backgroundColor = "red";
+        }
+
+        function tablenotarrindicator9() {
+            document.getElementById("tableColor9").style.backgroundColor = "yellow";
+        } // Next radio
+        function tablepresentindicator10() {
+            document.getElementById("tableColor10").style.backgroundColor = "lightgreen";
+        }
+
+        function tableabsentindicator10() {
+            document.getElementById("tableColor10").style.backgroundColor = "red";
+        }
+
+        function tablenotarrindicator10() {
+            document.getElementById("tableColor10").style.backgroundColor = "yellow";
+        } // Next radio
+        function tablepresentindicator11() {
+            document.getElementById("tableColor11").style.backgroundColor = "lightgreen";
+        }
+
+        function tableabsentindicator11() {
+            document.getElementById("tableColor11").style.backgroundColor = "red";
+        }
+
+        function tablenotarrindicator11() {
+            document.getElementById("tableColor11").style.backgroundColor = "yellow";
+        } // Next radio
+        function tablepresentindicator12() {
+            document.getElementById("tableColor12").style.backgroundColor = "lightgreen";
+        }
+
+        function tableabsentindicator12() {
+            document.getElementById("tableColor12").style.backgroundColor = "red";
+        }
+
+        function tablenotarrindicator12() {
+            document.getElementById("tableColor12").style.backgroundColor = "yellow";
+        } // Next radio
+        function tablepresentindicator13() {
+            document.getElementById("tableColor13").style.backgroundColor = "lightgreen";
+        }
+
+        function tableabsentindicator13() {
+            document.getElementById("tableColor13").style.backgroundColor = "red";
+        }
+
+        function tablenotarrindicator13() {
+            document.getElementById("tableColor13").style.backgroundColor = "yellow";
+        } // Next radio
+        function tablepresentindicator14() {
+            document.getElementById("tableColor14").style.backgroundColor = "lightgreen";
+        }
+
+        function tableabsentindicator14() {
+            document.getElementById("tableColor14").style.backgroundColor = "red";
+        }
+
+        function tablenotarrindicator14() {
+            document.getElementById("tableColor14").style.backgroundColor = "yellow";
+        }
+
+        // Next radio
+        function tablepresentindicator15() {
+            document.getElementById("tableColor15").style.backgroundColor = "lightgreen";
+        }
+
+        function tableabsentindicator15() {
+            document.getElementById("tableColor15").style.backgroundColor = "red";
+        }
+
+        function tablenotarrindicator15() {
+            document.getElementById("tableColor15").style.backgroundColor = "yellow";
+        }
+    </script>
+    <script>
+        document.getElementById('table').onclick = function(e) {
+            var e = e || event,
+                el = e.srcElement || e.target;
+            if (el.className == 'radiobtn') {
+                el.parentNode.parentNode.className = el.checked ? 'activep' : '';
+            }
+        };
+    </script>
+    <!--Reference links-->
+    <script src="/jquery.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script></body>
+<script> 
+    function validateradiobtn() { 
+        var radios = document.getElementsByName("optradio");
+         var formValid = false;
+          var a = 0;
+           var b = 0; for (b = 0; b < radios.length; b++) { 
+               if (radios[b].checked) { 
+                   a++; break; }
+                    } 
+                    var radios2 = document.getElementsByName( "optradio2"); 
+                    var formValid2=false; var a2=0 ; var b2=0 ; for (b2=0 ; b2 < radios.length; b2++) { if (radios[b2].checked) { a2++; break; } } if (a) { event.preventDefault() } else { alert(
+        "Please check an option"); return false; } if (a2) { event.preventDefault() } else { alert( "Please check an option"); return false; } } </script>
+                   
+
+
+</html>

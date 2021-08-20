@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign up</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap v 3.4.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="apple-touch-icon" sizes="180x180" href="/Pics/Icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Pics/Icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Pics/Icons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/Pics/Icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/Pics/Icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="msapplication-config" content="/Pics/Icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="/Float-label.css">
+    <link rel="stylesheet" href="stylings/Signup.css">
+</head>
+
+<body onload="loadisplay()">
+    <div class="container-fluid logonav d-flex align-items-center justify-content-center" style="padding: unset;flex-direction: column;">
+        <img src="Pics/logo.png" height="200px" width="100%" class="img-responsive" alt="Cbse Logo">
+    </div>
+    <div class="container boxShadow" style="background-color: #30d5c8;">
+        <div id="accCreated">
+            <div class="container-fluid"><br>
+                <div class="alert alert-success alert-dismissable fade in" id="verifyalert">
+                    <a class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Congratulations!</strong> You have been identified as a verified teacher of Delhi Public School,Navi Mumbai. Please continue to fill this sign up form. I can't wait for you to become a CBSE user!
+                </div>
+
+            </div>
+            <div class="row container" style="margin: auto;width: 300px;">
+
+                <div class="col-sm-4 form-group" >
+                    <h2 style="text-align: center;margin: auto;width: 250px;color: whitesmoke;" >Sign up</h2>
+                </div>
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4"></div>
+            </div>
+            <div class="row container">
+
+                <div class="col-sm-4 type " style="margin: auto; width: 70%;">
+
+                    <label class="radio-inline"><input type="radio" name="optradio" id="std" onclick="display(); closealert()" checked >    Student</label>
+                    <label class="radio-inline"><input type="radio" name="optradio" id="tchr" onclick="block();">       Teacher</label>
+                    <br>
+                </div>
+                <div class="col-sm-4"></div>
+                <div class="col-sm-4"></div>
+            </div>
+            <div id="progressCounter">
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+                <span class="step"></span>
+            </div>
+            <form onsubmit="functionacc(); pwdcheck(); adnumber()" style="margin-top: -50px;">
+                <div class="signupPanel1" id="form1">
+                    <h3>Personal Information</h3>
+                    <div class="row">
+                        <div class="col-sm-4 form-group">
+
+                            <input type="text" class="form-control" id="inputName" required>
+                            <label class="form-control-placeholder" for="inputName">Enter your name </label>
+                        </div>
+                        <div id="rollno" class="col-sm-4 form-group">
+                            <input type="number" class="form-control" id="rnumb" min="1" max="45" required>
+                            <label class="form-control-placeholder" for="rnumb">Roll no.</label>
+
+                        </div>
+                        <div id="admissionNo" class="col-sm-4 form-group">
+                            <input type="number" id="adnumb" class="form-control" required>
+                            <label class="form-control-placeholder" for="adnumb">Admission no.</label>
+                        </div>
+                    </div>
+                    <div id="subject" class="col-sm-4"><label>Subject:</label>
+
+
+                        <label class="radio-inline"><input type="radio" name="optradio3" checked>English</label>
+                        <label class="radio-inline"><input type="radio" name="optradio3">Hindi</label>
+                        <label class="radio-inline"><input type="radio" name="optradio3">French</label>
+                        <label class="radio-inline"><input type="radio" name="optradio3">German</label>
+                        <label class="radio-inline"><input type="radio" name="optradio3">Sanskrit</label>
+                        <label class="radio-inline"><input type="radio" name="optradio3">Maths</label>
+                        <label class="radio-inline"><input type="radio" name="optradio3">Science</label>
+                        <label class="radio-inline"><input type="radio" name="optradio3">Social science</label>
+
+
+                    </div>
+                    <div id="3rdLang" class="col-sm-4"><label>3rd Language:</label>
+
+
+                        <label class="radio-inline"><input type="radio" name="optradio4" checked>French</label>
+
+                        <label class="radio-inline"><input type="radio" name="optradio4">German</label>
+
+                        <label class="radio-inline"><input type="radio" name="optradio4">Sanskrit</label>
+                    </div>
+
+                </div>
+                <div class="signupPanel2" id="form2">
+                    <h3>Class Details</h3>
+                    <div class="row">
+                        <div id="class" class="col-sm-4"><label>Class:</label>
+
+
+                            <label class="radio-inline"><input type="radio" name="optradio1" checked> VI</label>
+
+
+                            <label class="radio-inline"><input type="radio" name="optradio1"> VII</label>
+
+                            <label class="radio-inline"><input type="radio" name="optradio1"> VIII</label>
+
+
+                        </div>
+
+                        <div id="section" class="col-sm-4"> <label>Section:</label>
+
+
+                            <label class="radio-inline"><input type="radio" name="optradio2" checked>A</label>
+                            <label class="radio-inline"><input type="radio" name="optradio2">B</label>
+                            <label class="radio-inline"><input type="radio" name="optradio2">C</label>
+                            <label class="radio-inline"><input type="radio" name="optradio2">D</label>
+                            <label class="radio-inline"><input type="radio" name="optradio2">E</label>
+                            <label class="radio-inline"><input type="radio" name="optradio2">F</label>
+
+
+                        </div>
+
+                        <div id="classTeacher" class="col-sm-4"><label>Class Teacher:</label>
+
+
+                            <label class="radio-inline"><input type="radio" name="optradio5" checked> VI</label>
+
+
+                            <label class="radio-inline"><input type="radio" name="optradio5"> VII</label>
+
+                            <label class="radio-inline"><input type="radio" name="optradio5"> VIII</label>
+
+
+                            <label class="radio-inline"><input type="radio" name="optradio5" checked>A</label>
+
+
+
+                            <label class="radio-inline"><input type="radio" name="optradio6">B</label>
+
+                            <label class="radio-inline"><input type="radio" name="optradio6">C</label>
+
+                            <label class="radio-inline"><input type="radio" name="optradio6" checked>D</label>
+
+                            <label class="radio-inline"><input type="radio" name="optradio6" checked>E</label>
+
+                            <label class="radio-inline"><input type="radio" name="optradio6" checked>F</label>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="signupPanel3" id="form3">
+                    <h3>User Details</h3>
+                    <div class="row">
+
+                        <div class="col-sm-4 form-group">
+                            <input type="email" class="form-control" id="usr" required>
+                            <label class="form-control-placeholder" for="usr"><span class="glyphicon glyphicon-user"></span>Username
+                                                    </label>
+
+                        </div>
+                        <div class="col-sm-4 form-group">
+                            <input type="password" class="form-control" id="pwdtst" required>
+                            <label class="form-control-placeholder" for="pwdtst"><span class="glyphicon glyphicon-lock"></span>Password</label>
+                        </div>
+                        <div class="col-sm-4 form-group">
+                            <input type="password" class="form-control" id="vpwd" required>
+                            <label class="form-control-placeholder" for="vpwd"><span class="glyphicon glyphicon-lock"></span>Verify Password</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="signupPanel4" id="form4">
+                    <h3>Security measures</h3>
+                    <div class="row container">
+
+
+                        <div class="col-sm-4">
+
+                            <div class="form-group">
+                                <label for="sel1"><span class="glyphicon glyphicon-lock"></span>Security questions(select any 1):</label>
+                                <select class="form-control">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                  </select>
+
+
+                            </div>
+
+                        </div><br>
+                        <div class="col-sm-4 form-group">
+                            <input class="form-control" type="text" id="answer2" required>
+                            <label class="form-control-placeholder" for="answer2"><span class="glyphicon glyphicon-pencil"></span>Answer</label>
+                            </label>
+                        </div>
+                        <div class="col-sm-4"></div>
+
+                    </div>
+                    <div class="row container">
+
+
+                        <div class="col-sm-4">
+
+                            <div class="form-group">
+                                <label for="sel1"><span class="glyphicon glyphicon-lock"></span>Security questions(select any 1):</label>
+                                <select class="form-control">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                  </select>
+
+
+                            </div>
+
+                        </div><br>
+                        <div class="col-sm-4 form-group">
+                            <input class="form-control" type="text" id="answer3" required>
+                            <label class="form-control-placeholder" for="answer3"><span class="glyphicon glyphicon-pencil"></span>Answer</label>
+                            </label>
+                        </div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                    <div class="row container">
+                        <div class="col-sm-4">
+
+                            <div class="form-group">
+                                <label for="sel1"><span class="glyphicon glyphicon-lock"></span>Security questions(select any 1):</label>
+                                <select class="form-control">
+                                                                    <option>1</option>
+                                                                    <option>2</option>
+                                                                    <option>3</option>
+                                                                    <option>4</option>
+                                                                    <option>5</option>
+                                                                  </select>
+
+
+                            </div>
+
+                        </div><br>
+                        <div class="col-sm-4 form-group">
+                            <input class="form-control" type="text" id="answer1" required>
+                            <label class="form-control-placeholder" for="answer1"><span class="glyphicon glyphicon-pencil"></span>Answer
+                                        </label></div>
+
+                        <div class="col-sm-4"></div>
+                    </div>
+                    <div class="container">
+                        <div class="col-sm-4">
+                            <button type="submit" class="btn blue" style="color: white;" onclick="formSubmit()">Sign up</button>
+                        </div>
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                </div>
+                <div class="conainer" style="display: flex;justify-content: center;align-items: center;margin-top: -50px;">
+
+                    <div class="col-sm-4" style="padding: 0 100px;">
+                        <button type="button" class="btn hoverBtn" onclick="window.location.href='/'"><b>Log in instead</b></button>
+                    </div>
+                    
+                </div>
+            </form>
+            <br>
+
+
+        </div>
+        <div id="accMessage">
+            <h1 style="font-size: 27px;">Congratulations! Your account has been created <br>
+                <a href="/">Click here</a> to Log in
+            </h1>
+            <div class="notify"><i class="fas fa-times" id="closeNotify"></i>Click the button to install a light web app. Less than 1MB, you won't even know it's there. Provides an app-like experience.
+                <button class="btn btn-warning" style="float: right;" onclick="install()">Install Webapp</button>
+            </div>
+        </div>
+        <div class="container">
+            <!-- The Modal -->
+            <!-- <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content"> -->
+
+                        <!-- Modal Header -->
+                        <!-- <div class="modal-header">
+                            <h4 class="modal-title">Teacher Verification</h4>
+                            <button type="button" class="close" onclick="closemodal()">&times;</button>
+                        </div> -->
+
+                        <!-- Modal body -->
+                        <!-- <form onsubmit="event.preventDefault(); verifyteacherpwd()">
+                            <div class="modal-body form-group">
+                                <label for="mpwd">Teacher's password:</label> <input type="password" class="form-control" id="mpwd" placeholder="Enter password to verify that you are a teacher" required>
+                            </div>
+                            <div class="alert alert-danger alert-dismissable fade in" id="verifyfailalert">
+                                <a class="close" onclick="document.getElementById('verifyfailalert').style.display = 'none';">&times;</a>
+                                <strong>Invalid Password!</strong> You have entered the wrong password.
+                            </div>
+
+                            
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-success">OK</button>
+                            </div>
+                        </form> -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <script>
+            function block() {
+                document.getElementById("class").style.display = "none";
+                document.getElementById("section").style.display = "none";
+                document.getElementById("rollno").style.display = "none";
+                document.getElementById("subject").style.display = "block";
+                document.getElementById("admissionNo").style.display = "none";
+                document.getElementById("classTeacher").style.display = "block";
+                document.getElementById("3rdLang").style.display = "none";
+            }
+
+            function display() {
+                document.getElementById("class").style.display = "block";
+                document.getElementById("rollno").style.display = "block";
+                document.getElementById("section").style.display = "block";
+                document.getElementById("subject").style.display = "none";
+                document.getElementById("admissionNo").style.display = "block";
+                document.getElementById("classTeacher").style.display = "none";
+                document.getElementById("3rdLang").style.display = "block";
+            }
+
+            function loadisplay() {
+                document.getElementById("subject").style.display = "none"
+                document.getElementById("classTeacher").style.display = "none";
+                document.getElementById('accMessage').style.display = "none";
+                document.getElementById('verifyalert').style.display = 'none';
+                document.getElementById('verifyfailalert').style.display = 'none';
+
+                // Controlling form  display
+                document.getElementById("form1").style.display = "block";
+                document.getElementById("form2").style.display = "none";
+                document.getElementById("form3").style.display = "none";
+                document.getElementById("form4").style.display = "none";
+            }
+
+            function modal() {
+                document.getElementById('myModal').style.display = "block";
+            }
+
+            function adnumber() {
+                var y = document.getElementById("adnumb").value;
+                var adtext
+                if (y != "" && (y < 2009001 || y > 2019999)) {
+                    adtext = "Invalid Admission no.";
+                    alert(adtext);
+                    document.getElementById('accCreated').style.display = "block";
+                    document.getElementById('accMessage').style.display = "none";
+                }
+                event.preventDefault()
+            }
+
+            function functionacc() {
+                event.preventDefault()
+                document.getElementById('accCreated').style.display = "none";
+                document.getElementById('accMessage').style.display = "block";
+            }
+
+            function pwdcheck() {
+                var p = document.getElementById('pwdtst').value;
+                var vp = document.getElementById('vpwd').value;
+                if (p === vp) {
+                    return;
+                } else {
+                    alert('Password and verify password must be same');
+                    document.getElementById('accCreated').style.display = "block";
+                    document.getElementById('accMessage').style.display = "none";
+                }
+                event.preventDefault()
+            }
+
+            function closemodal() {
+                document.getElementById('myModal').style.display = 'none'
+                document.getElementById('std').checked = "true";
+                display();
+            }
+
+            function verifyteacherpwd() {
+                if (document.getElementById('mpwd').value === "dpst") {
+                    document.getElementById('myModal').style.display = 'none';
+                    document.getElementById('verifyalert').style.display = 'block';
+                } else {
+                    document.getElementById('verifyfailalert').style.display = 'block';
+                }
+            }
+
+            function closealert() {
+                if (document.getElementById('verifyalert').style.display = 'block') {
+                    document.getElementById('verifyalert').style.display = 'none';
+                }
+            }
+
+            function nextclck() {
+                var form1 = document.getElementById("form1");
+                var form2 = document.getElementById("form2");
+                var form3 = document.getElementById("form3");
+                var form4 = document.getElementById("form4");
+                var next = document.getElementById("next");
+                if (form1.style.display === "block" && form2.style.display === "none" && form3.style.display === "none" && form4.style.display === "none") {
+                    form1.style.display = "none";
+                    form2.style.display = "block";
+                    form3.style.display = "none";
+                    form4.style.display = "none";
+                } else if (form1.style.display === "none" && form2.style.display === "block" && form3.style.display === "none" && form4.style.display === "none") {
+                    form1.style.display = "none";
+                    form2.style.display = "none";
+                    form3.style.display = "block";
+                    form4.style.display = "none";
+                } else if (form1.style.display === "none" && form2.style.display === "none" && form3.style.display === "block" && form4.style.display === "none") {
+                    form1.style.display = "none";
+                    form2.style.display = "none";
+                    form3.style.display = "none";
+                    form4.style.display = "block";
+                } else if (form1.style.display === "none" && form2.style.display === "none" && form3.style.display === "none" && form4.style.display === "block") {
+                    form1.style.display = "none";
+                    form2.style.display = "none";
+                    form3.style.display = "none";
+                    form4.style.display = "block";
+
+                }
+            }
+
+            function prevclck() {
+                var form1 = document.getElementById("form1");
+                var form2 = document.getElementById("form2");
+                var form3 = document.getElementById("form3");
+                var form4 = document.getElementById("form4");
+                var prev = document.getElementById("prev");
+                if (form1.style.display = "block" && form2.style.display === "none" && form3.style.display === "none" && form4.style.display === "none") {
+                    form1.style.display = "block";
+                    form2.style.display = "none";
+                    form3.style.display = "none";
+                    form4.style.display = "none";
+                } else if (form1.style.display === "none" && form2.style.display === "block" && form3.style.display === "none" && form4.style.display === "none") {
+                    form1.style.display = "block";
+                    form2.style.display = "none";
+                    form3.style.display = "none";
+                    form4.style.display = "none";
+                } else if (form1.style.display === "none" && form2.style.display === "none" && form3.style.display === "block" && form4.style.display === "none") {
+                    form1.style.display = "none";
+                    form2.style.display = "block";
+                    form3.style.display = "none";
+                    form4.style.display = "none";
+                } else if (form1.style.display === "none" && form2.style.display === "none" && form3.style.display === "none" && form4.style.display === "block") {
+                    form1.style.display = "none";
+                    form2.style.display = "none";
+                    form3.style.display = "block";
+                    form4.style.display = "none";
+                }
+            }
+        </script>
+        <script src="/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+        <script>
+            // This is the "Offline page" service worker
+
+            // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+
+            // Check compatibility for the browser we're running this in
+            if ("serviceWorker" in navigator) {
+                if (navigator.serviceWorker.controller) {
+                    console.log("[SERVICE WORKER] active service worker found, no need to register");
+                } else {
+                    // Register the service worker
+                    navigator.serviceWorker
+                        .register("sw.js", {
+                            scope: "./"
+                        })
+                        .then(function(reg) {
+                            console.log("[SERVICE WORKER] Service worker has been registered for scope: " + reg.scope);
+                        });
+                }
+            }
+
+            // Control form submit
+            function formSubmit() {
+                var form1 = document.getElementById("form1");
+                var form2 = document.getElementById("form2");
+                var form3 = document.getElementById("form3");
+                var form4 = document.getElementById("form4");
+                if (form1.style.display === "block" && form2.style.display === "block" && form3.style.display === "block" && form4.style.display === "block") {
+                    console.log("Form submit trigerred")
+                } else {
+                    form1.style.display = "block";
+                    form2.style.display = "block";
+                    form3.style.display = "block";
+                    form4.style.display = "block";
+                }
+            }
+
+            // Web app install prompts
+            let deferredPrompt;
+
+            window.addEventListener('beforeinstallprompt', (e) => {
+                // Prevent Chrome 76 and later from showing the mini-infobar
+                e.preventDefault();
+                // Stash the event so it can be triggered later.
+                deferredPrompt = e;
+                // Show/hide install prompts
+                installPrompts();
+            });
+            console.log(deferredPrompt);
+
+            // Show install prompts
+            function installPrompts() {
+                console.log(deferredPrompt)
+            }
+            //If app has already been installed, don't show prompts
+            // Run it onload of body
+            function hideprompts() {
+                if (deferredPrompt === null || deferredPrompt === undefined) {
+                    document.getElementById("notify").style.display = "none";
+                }
+            }
+            // Click button to trigger install
+
+            async function install() {
+                if (deferredPrompt) {
+                    deferredPrompt.prompt();
+                    console.log(deferredPrompt)
+                    deferredPrompt.userChoice.then(function(choiceResult) {
+
+                        if (choiceResult.outcome === 'accepted') {
+                            console.log('Your PWA has been installed');
+                        } else {
+                            console.log('User chose to not install your PWA');
+                        }
+
+                        deferredPrompt = null;
+
+                    });
+                } else {
+                    console.log("Web app not installed")
+                }
+            }
+        </script>
+</body>
+
+
+</html>

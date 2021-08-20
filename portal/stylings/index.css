@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap');
+
+
+hr {
+    width: 100%;
+}
+html{
+    background: #d3d3d3;
+
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+}
+#totalIntro{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    height: 90vh;
+    box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+    display: flex;
+    
+}
+.flexCenter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#loginIntro{
+    /* border: 12px solid black; */
+    width: 60%;
+    height: 100%;
+    /* border: 1px solid red; */
+
+}
+
+.logonav{
+    width: 40%;
+    height: 17vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+.logonav img{
+    object-fit: cover;
+    /* margin: 0 200px; */
+    /* border: 1px solid green; */
+    height:100px; 
+    width: 150px;
+    transform: scale(1.3);
+    z-index: 100;
+}
+
+#usr, #inputPassword6{
+    width: 300px;
+    border-radius: 50px;
+    z-index: 120;
+    /* border: 1px solid black; */
+    /* height: 30px; */
+    padding: 10px;
+}
+
+.purple{
+    background: #800080;
+    width: 200px;
+    /* height: 100px;  */
+}
+
+.slogan{
+    width: 40%;
+    height: 100%;
+    /* border: 2px solid red; */
+    font-family: 'Poppins';
+    background: #30d5c8;
+    box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.slogan h2{
+    font-size: 50px;
+    line-height: 80px;
+}
+
+.sloganImg{
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+.blue{
+    background: #30d5c8;
+}
+.sloganInfo{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 30%;
+    /* border: 1px solid red; */
+}
+.sloganInfo button{
+    width: 250px;
+    height: 50px;
+    border-radius: 50px;
+}
+.sloganInfo h2{
+    font-weight: 800;
+}
+@media only screen and (max-width: 1000px) {
+    
+    #loginIntro{
+    width: 100%;
+  }
+  .slogan{
+    width: 0%;
+    display: none;
+    pointer-events: none;
+
+  }
+ 
+}

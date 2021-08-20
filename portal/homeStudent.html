@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title id="title">Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap v 3.4.1 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/Pics/Icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Pics/Icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Pics/Icons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/Pics/Icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/Pics/Icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="msapplication-config" content="/Pics/Icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="stylings/homeStudent.css">
+    
+</head>
+
+<body>
+
+    <div class="logonav">
+        <img src="Pics/logo.png"  class="logoimg" alt=" Logo">
+
+
+    </div>
+
+    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+        <div class="container-fluid">
+            <div class="dropdown">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#for-collapse-navbar" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                              </button>
+                    <a class="navbar-brand" onclick="switchtoAbout()" style="cursor: pointer;">Cbse Portal <span class="sr-only">(current)</span></a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="for-collapse-navbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a onclick="redirectToHome()"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Subject</a>
+
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu">
+
+                                    <a onclick="onclickhin()" style="cursor: pointer;z-index: 1000;">Hindi</a>
+
+                                    <a onclick="onclickeng()">English</a>
+
+                                    <a onclick="onclicklang()">3rd Language</a>
+
+                                    <a onclick="onclickmath()">Maths</a>
+
+
+                                    <li class="dropdown-submenu main"><a class="test" tabindex="-1" href="#">Science</a>
+                                        <ul class="dropdown-menu  todisplay">
+                                            <li class="dropdown-submenu">
+                                                <a onclick="onclickphys()">Physics</a>
+
+                                                <a onclick="onclickchem()">Chemistry</a>
+
+                                                <a onclick="onclickbio()">Biology</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu main"><a class="test" tabindex="-1" href="#">Social Science</a>
+                                        <ul class="dropdown-menu todisplay">
+                                            <li class="dropdown-submenu">
+                                                <a onclick="onclickhist()">History</a>
+
+                                                <a onclick="onclickciv()">Civics</a>
+
+                                                <a onclick="onclickgeo()">Geography</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                            </ul>
+                            </li>
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">User name</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <div class="img-cont">
+                                        <img src="/Pics/graduate-student-avatar.jpg" class="avatar img-responsive" alt="Student avatar">
+                                        <span class="dropdown-item-text bigfont">Student</span>
+                                    </div>
+                                    <li class="divider"></li>
+                                    <span class="dropdown-item-text marginLogOut">Name</span><br>
+                                    <span class="dropdown-item-text marginLogOut">Class/Section</span><br>
+                                    <span class="dropdown-item-text marginLogOut">Roll no.</span><br>
+                                    <span class="dropdown-item-text marginLogOut">Admission no.</span><br>
+
+                                    <li class="divider"></li>
+                                    <button type="button" class="btn btn-danger" style="float: right" onclick="window.location.href ='/'">
+                                                        <span class="glyphicon glyphicon-log-out">
+                                                        </span> Log out</button>
+                                    <button type="button" class="btn btn-secndary" style="float: left" onclick="switchtoSettings()"><span class="glyphicon glyphicon-cog"></span></button>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid iframepadding">
+        <iframe src="TechordStudent.html" id="iframe" height="600px">Iframe</iframe>
+    </div>
+
+
+
+
+
+    <script>
+        function onclickhin() {
+            document.getElementById("iframe").src = "Subject.html";
+            document.getElementById("title").innerHTML = "Hindi";
+            console.log('works');
+        }
+
+        function onclickeng() {
+            document.getElementById("iframe").src = "Subject.html";
+            document.getElementById("title").innerHTML = "English";
+        }
+
+        function onclicklang() {
+            document.getElementById("iframe").src = "Subject.html";
+            document.getElementById("title").innerHTML = "3rdlang";
+        }
+
+        function onclickmath() {
+            document.getElementById("iframe").src = "Subject.html";
+            document.getElementById("title").innerHTML = "Maths";
+        }
+
+        function onclickphys() {
+            document.getElementById("iframe").src = "Subject.html";
+            document.getElementById("title").innerHTML = "Physics";
+        }
+
+        function onclickchem() {
+            document.getElementById("iframe").src = "Subject.html";
+            document.getElementById("title").innerHTML = "Chemistry";
+        }
+
+        function onclickbio() {
+            document.getElementById("iframe").src = "Subject.html";
+            document.getElementById("title").innerHTML = "Biology";
+        }
+
+        function onclickhist() {
+            document.getElementById("iframe").src = "Subject.html";
+            document.getElementById("title").innerHTML = "History";
+        }
+
+        function onclickciv() {
+            document.getElementById("iframe").src = "Subject.html";
+            document.getElementById("title").innerHTML = "Civics";
+        }
+
+        function onclickgeo() {
+            document.getElementById("iframe").src = "Subject.html";
+            document.getElementById("title").innerHTML = "Geography";
+        }
+
+        function switchtoAbout() {
+            document.getElementById('iframe').src = "About.html";
+            document.getElementById("title").innerHTML = "About";
+        }
+
+        function redirectToHome() {
+            document.getElementById('iframe').src = "TechordStudent.html";
+            document.getElementById("title").innerHTML = "Home";
+        }
+
+        function switchtoSettings() {
+            document.getElementById('iframe').src = "SettingsStd.html";
+            document.getElementById("title").innerHTML = "Settings";
+        }
+    </script>
+
+    <script src="/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>    <script>
+        // This is the "Offline page" service worker
+
+        // Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
+
+        // Check compatibility for the browser we're running this in
+        if ("serviceWorker" in navigator) {
+            if (navigator.serviceWorker.controller) {
+                console.log("[SERVICE WORKER] active service worker found, no need to register");
+            } else {
+                // Register the service worker
+                navigator.serviceWorker
+                    .register("sw.js", {
+                        scope: "./"
+                    })
+                    .then(function(reg) {
+                        console.log("[SERVICE WORKER] Service worker has been registered for scope: " + reg.scope);
+                    });
+            }
+        }
+    </script>
+    
+</body>
+
+</html>

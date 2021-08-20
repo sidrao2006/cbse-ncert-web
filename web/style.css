@@ -39,12 +39,15 @@ nav .btn:hover{
 }
 
 .introText{
+    font-family: 'Poppins';
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    color: white;
-    font-size: 35px;
+    left: 55%;
+    top: 30%;
+    /* transform: translate(-30%,-80%); */
+    color: black;
+    /* border: 1px solid black; */
+    width: 500px;
+    font-size: 45px;
     text-transform: uppercase;
     letter-spacing: 1px;
     z-index: 10;
@@ -53,14 +56,18 @@ nav .btn:hover{
 .introContainer{
     position: relative;
     /* border: 4px solid green; */
-    /* background-image: url(assets/intro.jpeg); */
-    background-size: 100%, 70%;
-    background-repeat: no-repeat;
+    
+   overflow: hidden;
     height: 79vh;
     width: 100vw;
     
 }
 .introContainer img{
+    position: absolute;
+    left: -50%;
+    width: 50%;
+    border-bottom-right-radius: 350px;
+    border-top-right-radius: 0px;
     object-fit: cover;
     filter: drop-shadow(16px 16px 20px blue);
     filter: contrast(200%);
@@ -68,7 +75,6 @@ nav .btn:hover{
     filter: saturate(200%);
     filter: brightness(0.7);
     z-index: 2;
-    /* filter: blur(1px); */
    
 }
 
@@ -96,8 +102,27 @@ nav .btn:hover{
 .btnLink{
     width: 300px;
     height: 70px;
+    color: white;
+    /* border-radius: 20px; */
 }
+@media only screen and (max-width: 1020px) {
+    .introText{
+        /* position: absolute; */
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        color: white;
+    }
+    .introContainer img{
+        position: absolute;
+        left: 0%;
+        width: 100vw;
+        border-bottom-right-radius: 0px;
+            filter: blur(4px);
+   
 
+    }
+  }
 @media only screen and (max-width: 720px) {
     .btnLink{
         width: 200px;
@@ -108,6 +133,10 @@ nav .btn:hover{
 
   #purple{
       background: #800080;
+      color: white;
+    border-radius: 50px;
+
+
   }
   #purple:hover{
     background: #5b025b;

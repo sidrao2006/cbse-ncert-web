@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap');
+
+html{
+    font-family: 'Poppins';
+
+}
+body {
+    /* background-image: url("/Pics/SignupBackgroung.png"); */
+    background: #d3d3d36d;
+    /* color: white; */
+}
+
+.accMessage {
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -200px;
+    height: 200px;
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+    position: fixed;
+    top: 65%;
+    left: 30%;
+    margin-top: -100px;
+    margin-left: -200px;
+    height: 200px;
+    width: 1000px;
+}
+
+.btn-default {
+    color: mediumblue;
+}
+
+.row {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+/* Here it is */
+.blue{
+    background: #30d5c8;
+}
+.signupPanel1 {
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    background-color: #ffffff;
+    margin: 100px auto;
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+    min-height: 220px;
+    height: auto;
+    border-radius: 10px;
+}
+.hoverBtn{
+    /* border: 1px solid red; */
+    text-transform: capitalize;
+}
+.hoverBtn:hover{
+    border-bottom: 3px solid black;
+}
+
+.signupPanel2 {
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    background-color: #ffffff;
+    margin: 100px auto;
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.signupPanel3 {
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    background-color: #ffffff;
+    margin: 100px auto;
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.signupPanel4 {
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    background-color: #ffffff;
+    margin: 100px auto;
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.btn {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+.notify {
+    background-color: #c4453c;
+    background-image: -webkit-linear-gradient(135deg, transparent, transparent 25%, hsla(0, 0%, 0%, .05) 25%, hsla(0, 0%, 0%, .05) 50%, transparent 50%, transparent 75%, hsla(0, 0%, 0%, .05) 75%, hsla(0, 0%, 0%, .05));
+    background-image: -moz-linear-gradient(135deg, transparent, transparent 25%, hsla(0, 0%, 0%, .1) 25%, hsla(0, 0%, 0%, .1) 50%, transparent 50%, transparent 75%, hsla(0, 0%, 0%, .1) 75%, hsla(0, 0%, 0%, .1));
+    background-image: -ms-linear-gradient(135deg, transparent, transparent 25%, hsla(0, 0%, 0%, .1) 25%, hsla(0, 0%, 0%, .1) 50%, transparent 50%, transparent 75%, hsla(0, 0%, 0%, .1) 75%, hsla(0, 0%, 0%, .1));
+    background-image: -o-linear-gradient(135deg, transparent, transparent 25%, hsla(0, 0%, 0%, .1) 25%, hsla(0, 0%, 0%, .1) 50%, transparent 50%, transparent 75%, hsla(0, 0%, 0%, .1) 75%, hsla(0, 0%, 0%, .1));
+    background-image: linear-gradient(135deg, transparent, transparent 25%, hsla(0, 0%, 0%, .1) 25%, hsla(0, 0%, 0%, .1) 50%, transparent 50%, transparent 75%, hsla(0, 0%, 0%, .1) 75%, hsla(0, 0%, 0%, .1));
+    background-size: 20px 20px;
+    display: block;
+    position: fixed;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    bottom: -200px;
+    width: 100%;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.logonav{
+    /* border-bottom: 1px solid black; */
+    width: 100%;
+    height: 17vh;
+    display: flex;
+    /* margin-left: 10px; */
+    /* justify-content: flex-end; */
+    align-items: center;
+    position: relative;
+    box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+    background: #fff;
+
+
+}
+.logonav img{
+    object-fit: cover;
+    /* margin: 0 200px; */
+    /* border: 1px solid green; */
+    height:100px; 
+    width: 150px;
+    transform: scale(1.3);
+    z-index: 100;
+    position: absolute;
+    left: 5%;
+    /* top: 50%; */
+}
+.boxShadow{
+    box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+
+}
+.type{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 2px solid black; */
+    font-size: 20px;
+    width: 100%;
+    
+}

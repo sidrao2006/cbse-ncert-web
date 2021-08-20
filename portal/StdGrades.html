@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Record</title>
+    <!-- Bootstrap v 3.4.1 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!--Reference Stylesheets (Bootstrap v-3.4.1)-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/ico" href="/Pics/Favicon.ico">
+    <link rel="stylesheet" href="/w3.css">
+    <style>
+        .gllg {
+            font-size: x-large;
+            padding: 4%;
+            border-radius: 50%;
+        }
+        
+        .gllg:hover {
+            background-color: darkgray;
+        }
+    </style>
+</head>
+
+<body><br>
+    <div class="container-fluid">
+        <form onsubmit=" event.preventDefault()">
+            <table class="table table-responsive table-striped" id="table">
+                <thead>
+                    <tr>
+                        <th>Roll no.</th>
+                        <th>Name</th>
+                        <th>S.E.A I</th>
+                        <th>P.T I</th>
+                        <th>Half Yearly</th>
+                        <th>Final Grade</th>
+                        <th></th>
+                        <th>Download </th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th>Marks</th>
+                        <th>Marks</th>
+                        <th>Marks</th>
+                        <th>Marks</th>
+                        <th>Grade</th>
+                        <th>Report Card</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            Rob
+                        </td>
+                        <td class="form-group">
+                            <label><input type="number" class="form-control" id="sea1" min="1" max="25"  required >/25</label>
+                        </td>
+
+                        <td>
+                            <label><input type="number" class="form-control" min="1" max="40" id="pt1" required>/40</label>
+                        </td>
+
+                        <td>
+                            <label><input type="number" class="form-control" min="1" max="80" required>/80</label>
+                        </td>
+                        <td id="finalMarks1">50</td>
+                        <td id="finalGrade1"></td>
+                        <td><span class="glyphicon glyphicon-download-alt gllg"></span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>
+                            Bob
+                        </td>
+                        <td class="form-group">
+                            <label><input type="number" class="form-control " id="sea2" min="1" max="25" required >/25</label>
+                        </td>
+
+                        <td>
+                            <label><input type="number" class="form-control" min="1" max="40" id="pt2" required>/40</label>
+                        </td>
+
+                        <td>
+                            <label><input type="number" class="form-control" min="1" max="80" required>/80</label>
+                        </td>
+                        <td id="finalMarks2"></td>
+                        <td id="finalGrade2"></td>
+                        <td><span class="glyphicon glyphicon-download-alt gllg "></span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>
+                            Shuban
+                        </td>
+                        <td class="form-group">
+                            <label><input type="number" class="form-control" id="sea3" min="1" max="25" required >/25</label>
+                        </td>
+
+                        <td>
+                            <label><input type="number" class="form-control" min="1" max="40"  id="pt3" required>/40</label>
+                        </td>
+
+                        <td>
+                            <label><input type="number" class="form-control" min="1" max="80" required>/80</label>
+                        </td>
+
+                        <td id="finalMarks3"></td>
+                        <td id="finalGrade3"></td>
+                        <td><span class="glyphicon glyphicon-download-alt gllg "></span></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>
+                            Robin
+                        </td>
+                        <td class="form-group">
+                            <label><input type="number" class="form-control" id="sea4" min="1" max="25" required >/25</label>
+                        </td>
+
+                        <td>
+                            <label><input type="number" class="form-control" min="1" max="40"  id="pt4" required>/40</label>
+                        </td>
+
+                        <td>
+                            <label><input type="number" class="form-control" min="1" max="80" required>/80</label>
+                        </td>
+
+                        <td id="finalMarks4"></td>
+                        <td id="finalGrade4"></td>
+                        <td><span class="glyphicon glyphicon-download-alt gllg "></span></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>
+                            Rohit
+                        </td>
+                        <td class="form-group">
+                            <label><input type="number" class="form-control" id="sea5" min="1" max="25" required >/25</label>
+                        </td>
+
+                        <td>
+                            <label><input type="number" class="form-control" min="1" max="40"  id="pt5" required>/40</label>
+                        </td>
+
+                        <td>
+                            <label><input type="number" class="form-control" min="1" max="80" required>/80</label>
+                        </td>
+
+                        <td id="finalMarks5"></td>
+                        <td id="finalGrade5"></td>
+                        <td><span class="glyphicon glyphicon-download-alt gllg"></span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>
+                            Rohan
+                        </td>
+                        <td class="form-group">
+                            <label><input type="number" class="form-control" id="sea6" min="1" max="25" required >/25</label>
+                        </td>
+
+                        <td>
+                            <label><input type="number" class="form-control" min="1" max="40"  id="pt6" required>/40</label>
+                        </td>
+
+                        <td>
+                            <label><input type="number" class="form-control" min="1" max="80" required>/80</label>
+                        </td>
+
+                        <td id="finalMarks6"></td>
+                        <td id="finalGrade6"></td>
+                        <td><span class="glyphicon glyphicon-download-alt gllg "></span></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>
+                            Shyam
+                        </td>
+                        <td class="form-group">
+                            <label><input type="number" class="form-control" id="sea7" min="1" max="25" required >/25</label>
+                        </td>
+
+                        <td>
+                            <label><input type="number" class="form-control" min="1" max="40"  id="pt7" required>/40</label>
+                        </td>
+
+                        <td>
+                            <label><input type="number" class="form-control" min="1" max="80" required>/80</label>
+                        </td>
+
+                        <td id="finalMarks7"></td>
+                        <td id="finalGrade7"></td>
+                        <td><span class="glyphicon glyphicon-download-alt gllg "></span></td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <button class="btn btn-primary" type="submit">Submit Marksheet</button>
+            <button class="btn btn-success" type="button">Download all Report Cards</button>
+        </form>
+    </div>
+    <!--Final Grade Display-->
+    <script>
+        var sea1 = document.getElementById("sea1").value;
+        var sea2 = document.getElementById("sea2").value;
+        var sea3 = document.getElementById("sea3").value;
+        var sea4 = document.getElementById("sea4").value;
+        var sea5 = document.getElementById("sea5").value;
+        var sea6 = document.getElementById("sea6").value;
+        var sea7 = document.getElementById("sea7").value;
+        var finalMarks1 = document.getElementById("finalMarks1").innerHTML;
+        var finalMarks2 = document.getElementById("finalMarks2").innerHTML;
+        var finalMarks3 = document.getElementById("finalMarks3").innerHTML;
+        var finalMarks4 = document.getElementById("finalMarks4").innerHTML;
+        var finalMarks5 = document.getElementById("finalMarks5").innerHTML;
+        var finalMarks6 = document.getElementById("finalMarks6").innerHTML;
+        var finalMarks7 = document.getElementById("finalMarks7").innerHTML;
+        if (sea1 != "" && (sea1 <= 5)) {
+            if (sea1 >= 0) {
+                document.getElementById("finalGrade1").innerHTML = "E2";
+            }
+        } else if (sea1 != "" && (sea1 <= 8)) {
+            if (sea1 >= 5.25) {
+                document.getElementById("finalGrade1").innerHTML = "E1";
+            }
+        } else if (sea1 != "" && (sea1 <= 10)) {
+            if (sea1 >= 8.25) {
+                document.getElementById("finalGrade1").innerHTML = "D";
+            }
+        } else if (sea1 != "" && (sea1 <= 12.5)) {
+            if (sea1 >= 10.25) {
+                document.getElementById("finalGrade1").innerHTML = "C2";
+            }
+        } else if (sea1 != "" && (sea1 <= 15)) {
+            if (sea1 >= 12.75) {
+                document.getElementById("finalGrade1").innerHTML = "C1";
+            }
+        } else if (sea1 != "" && (sea1 <= 17.5)) {
+            if (sea1 >= 15.25) {
+                document.getElementById("finalGrade1").innerHTML = "B2";
+            }
+        } else if (sea1 != "" && (sea1 <= 20)) {
+            if (sea1 >= 17.75) {
+                document.getElementById("finalGrade1").innerHTML = "B1";
+            }
+        } else if (sea1 != "" && (sea1 <= 22.5)) {
+            if (sea1 >= 20.25) {
+                document.getElementById("finalGrade1").innerHTML = "A2";
+            }
+        } else if (sea1 != "" && (sea1 <= 25)) {
+            if (sea1 >= 22.75) {
+                document.getElementById("finalGrade1").innerHTML = "A1";
+            }
+        } else {
+            document.getElementById("finalGrade1").innerHTML = "";
+        }
+
+        if (finalMarks1 != "" && (finalMarks1 <= 20)) {
+            if (finalMarks1 >= 1) {
+                document.getElementById("finalGrade1").innerHTML = "E2";
+            }
+        } else if (finalMarks1 != "" && (finalMarks1 <= 30)) {
+            if (finalMarks1 >= 21) {
+                document.getElementById("finalGrade1").innerHTML = "E1";
+            }
+        } else if (finalMarks1 != "" && (finalMarks1 <= 40)) {
+            if (finalMarks1 >= 31) {
+                document.getElementById("finalGrade1").innerHTML = "D";
+            }
+        } else if (finalMarks1 != "" && (finalMarks1 <= 50)) {
+            if (finalMarks1 >= 41) {
+                document.getElementById("finalGrade1").innerHTML = "C2";
+            }
+        } else if (finalMarks1 != "" && (finalMarks1 <= 60)) {
+            if (finalMarks1 >= 51) {
+                document.getElementById("finalGrade1").innerHTML = "C1";
+            }
+        } else if (finalMarks1 != "" && (finalMarks1 <= 70)) {
+            if (finalMarks1 >= 61) {
+                document.getElementById("finalGrade1").innerHTML = "B2";
+            }
+        } else if (finalMarks1 != "" && (finalMarks1 <= 80)) {
+            if (finalMarks1 >= 71) {
+                document.getElementById("finalGrade1").innerHTML = "B1";
+            }
+        } else if (finalMarks1 != "" && (finalMarks1 <= 90)) {
+            if (finalMarks1 >= 81) {
+                document.getElementById("finalGrade1").innerHTML = "A2";
+            }
+        } else if (finalMarks1 != "" && (finalMarks1 <= 100)) {
+            if (finalMarks1 >= 91) {
+                document.getElementById("finalGrade1").innerHTML = "A1";
+            }
+        } else {
+            document.getElementById("finalGrade1").innerHTML = "";
+        }
+    </script>
+    <!--Reference Links-->
+    <script src="/StdGrades.js"></script>
+    <script src="/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+
+</html>
