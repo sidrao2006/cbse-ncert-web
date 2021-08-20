@@ -134,18 +134,20 @@ nav .btn:hover{
     }
   }
 
-  #purple{
-      background: #800080;
-      color: white;
+  #blue{
+    background: #30d5c8;
+    color: white;
     border-radius: 50px;
     font-family:poppins;
     font-size:18px;
 
 
   }
-  #purple:hover{
-    background: #5b025b;
+  #blue:hover{
+    background: #0fe7d5;
+
   }
+
 
   .btnLink{
     font-family: poppins;
