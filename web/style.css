@@ -154,3 +154,44 @@ nav .btn:hover{
     font-family: poppins;
     font-size:18px;
   }
+
+  footer{
+      background-color: rgb(29, 29, 29);
+  }
+
+  .mb-1{
+      color:white;
+  }
+
+  .mt-3{
+      color:white;
+      text-align: center;
+      font-family: montserrat;
+      letter-spacing: 2px;
+      margin-left:370px;
+      position: relative;
+      top:-20px;
+  }
+
+   #socio{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       position: relative;
+       top:40px;
+       right:325px;
+       margin-bottom:12px;
+   }
+
+   .fa-instagram{
+       color:pink;
+   }
+   .fa-facebook{
+    color:rgb(39, 85, 212);
+    }
+    .fa-linkedin{
+        color:rgb(79, 121, 238);
+    }
+    .fa-youtube{
+        color:rgb(212, 45, 39);
+    }
