@@ -108,10 +108,12 @@ nav .btn:hover{
 @media only screen and (max-width: 1020px) {
     .introText{
         /* position: absolute; */
-        left: 50%;
+        /* left: 50%; */
         top: 50%;
         transform: translate(-50%,-50%);
         color: white;
+        font-size: 35px;
+
     }
     .introContainer img{
         position: absolute;
