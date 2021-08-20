@@ -2,11 +2,11 @@
 
 const CACHE = "pwabuilder-precache";
 const precacheFiles = [
-    "index.html", "homeStudent.html", "homeTeacher.html", "/Pics/avatarteacher.jpeg",
-    "/Pics/bulboff.png", "/Pics/bulbon.png", "/Pics/Dps_frontView.jpeg", "/Pics/Dps_horseRiding.png",
-    "/Pics/Dps_sideView.jpg", "/Pics/Dps_topView.jpeg", "/Pics/Earth.png", "/Pics/graduate-student-avatar.jpg",
-    "/Pics/LogoForAbout.png", "/Pics/LogoTechord.jpg", "/Pics/SadFace.png", "/Pics/SignupBackgroung.png",
-    "/Pics/SmileyFace.png", "/Pics/Swse.png", "/Pics/treePicture.jpg", "/Pics/Water.png", "/Pics/WaterDrop.png"
+    "index.html", "homeStudent.html", "homeTeacher.html", "Pics/avatarteacher.jpeg",
+    "Pics/bulboff.png", "Pics/bulbon.png", "Pics/Dps_frontView.jpeg", "Pics/Dps_horseRiding.png",
+    "Pics/Dps_sideView.jpg", "Pics/Dps_topView.jpeg", "Pics/Earth.png", "Pics/graduate-student-avatar.jpg",
+    "Pics/LogoForAbout.png", "Pics/LogoTechord.jpg", "Pics/SadFace.png", "Pics/SignupBackgroung.png",
+    "Pics/SmileyFace.png", "Pics/Swse.png", "Pics/treePicture.jpg", "Pics/Water.png", "Pics/WaterDrop.png"
 ];
 
 self.addEventListener("install", function(event) {

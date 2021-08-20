@@ -12,14 +12,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <!--Favicons and other icons-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/Pics/Icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/Pics/Icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/Pics/Icons/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Pics/Icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Pics/Icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Pics/Icons/favicon-16x16.png">
     <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/Pics/Icons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="/Pics/Icons/favicon.ico">
+    <link rel="mask-icon" href="Pics/Icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="Pics/Icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#ffc40d">
-    <meta name="msapplication-config" content="/Pics/Icons/browserconfig.xml">
+    <meta name="msapplication-config" content="Pics/Icons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="stylings/homeTeacher.css">
    
@@ -185,7 +185,7 @@
                             <ul class="dropdown-menu">
                                 <li class="dropdown-submenu">
                                     <div class="img-cont">
-                                        <img src="/Pics/avatarteacher.jpeg" class="avatar img-responsive" alt="Teacher avatar">
+                                        <img src="Pics/avatarteacher.jpeg" class="avatar img-responsive" alt="Teacher avatar">
                                         <span class="dropdown-item-text bigfont">Teacher</span>
                                     </div>
                                     <li class="divider"></li>
@@ -193,9 +193,11 @@
                                     <span class="dropdown-item-text marginLogOut">Subject</span><br>
                                     <span class="dropdown-item-text marginLogOut">Class Teacher</span>
                                     <li class="divider"></li>
-                                    <button type="button" class="btn btn-danger" style="float: right" onclick="window.location.href = '/'">
-                                            <span class="glyphicon glyphicon-log-out">
-                                            </span> Log out</button>
+                                   <a href="index.html">
+                                    <button type="button" class="btn btn-danger" style="float: right">
+                                        <span class="glyphicon glyphicon-log-out">
+                                        </span> Log out</button>
+                                   </a> 
                                     <button type="button" class="btn btn-secndary" style="float: left" onclick="switchtoSettings()"><span class="glyphicon glyphicon-cog"></span></button>
                                 </li>
                             </ul>
