@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Poppins:wght@300;500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -51,12 +51,12 @@ nav .btn:hover{
     text-transform: uppercase;
     letter-spacing: 1px;
     z-index: 10;
-    font-family:poppins;
+    font-family:'patua one';
 }
 .introContainer{
     position: relative;
     /* border: 4px solid green; */
-    
+    background-color:rgb(19, 153, 75);
    overflow: hidden;
     height: 79vh;
     width: 100vw;
@@ -138,9 +138,16 @@ nav .btn:hover{
       background: #800080;
       color: white;
     border-radius: 50px;
+    font-family:poppins;
+    font-size:18px;
 
 
   }
   #purple:hover{
     background: #5b025b;
+  }
+
+  .btnLink{
+    font-family: poppins;
+    font-size:18px;
   }
