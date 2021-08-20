@@ -135,16 +135,17 @@ nav .btn:hover{
   }
 
   #blue{
-    background: #30d5c8;
+    background: #3098d5;
     color: white;
     border-radius: 50px;
     font-family:poppins;
     font-size:18px;
+    transition: .5s;
 
 
   }
   #blue:hover{
-    background: #0fe7d5;
+    background: #870dce;
 
   }
 
