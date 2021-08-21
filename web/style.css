@@ -47,7 +47,6 @@ nav .btn:hover{
     color: black;
     /* border: 1px solid black; */
     width: 500px;
-    font-size: 45px;
     text-transform: uppercase;
     letter-spacing: 1px;
     z-index: 10;
@@ -170,7 +169,7 @@ nav .btn:hover{
       text-align: center;
       font-family: montserrat;
       letter-spacing: 2px;
-      margin-left:370px;
+      margin-left:420px;
       position: relative;
       top:-20px;
   }
@@ -181,7 +180,7 @@ nav .btn:hover{
        align-items: center;
        position: relative;
        top:40px;
-       right:325px;
+       right:393px;
        margin-bottom:12px;
    }
 
